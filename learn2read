@@ -4,15 +4,15 @@ wb = Workbook()
 # grab the active worksheet
 ws = wb.active
 
-# Data can be assigned directly to cells
+# 直接写入数据到A1
 ws['A1'] = 42
 
-# Rows can also be appended
+# A2行依次写入三列数据
 ws.append([1, 2, 3])
 
-# Python types will automatically be converted
+# 覆盖A2行第一列数据
 import datetime
 ws['A2'] = datetime.datetime.now()
 
-# Save the file
+# 保存文件到当前目录
 wb.save("sample.xlsx")
